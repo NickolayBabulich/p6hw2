@@ -1,8 +1,9 @@
 from django.shortcuts import render
-
+from catalog.models import Product
 
 # Create your views here.
 def index(request):
+    print(f'{Product.objects.all()}')
     return render(request, 'catalog/index.html')
 
 

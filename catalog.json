@@ -1,0 +1,120 @@
+[
+  {
+    "model": "catalog.category",
+    "pk": 44,
+    "fields": {
+      "name": "Компьютер",
+      "description": "Компьютер"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 45,
+    "fields": {
+      "name": "Принтер",
+      "description": "Принтер"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 46,
+    "fields": {
+      "name": "Пылесос",
+      "description": "Пылесос"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 47,
+    "fields": {
+      "name": "Холодильник",
+      "description": "Холодильник"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 48,
+    "fields": {
+      "name": "Телевизор",
+      "description": "Телевизор"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "name": "macbook",
+      "description": "",
+      "image": "",
+      "category": 44,
+      "price": 7777,
+      "date_create": "2023-09-27T01:31:38Z",
+      "date_of_change": "2023-09-27T01:31:40Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+      "name": "Hisens l200",
+      "description": "",
+      "image": "",
+      "category": 47,
+      "price": 6676,
+      "date_create": "2023-09-27T01:31:52Z",
+      "date_of_change": "2023-09-27T01:31:54Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+      "name": "Samsung gh504",
+      "description": "",
+      "image": "",
+      "category": 48,
+      "price": 45675,
+      "date_create": "2023-09-27T01:32:05Z",
+      "date_of_change": "2023-09-27T01:32:07Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 6,
+    "fields": {
+      "name": "canon photo",
+      "description": "",
+      "image": "",
+      "category": 45,
+      "price": 5667,
+      "date_create": "2023-09-27T01:32:27Z",
+      "date_of_change": "2023-09-27T01:32:28Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 7,
+    "fields": {
+      "name": "LG TV",
+      "description": "",
+      "image": "",
+      "category": 48,
+      "price": 56,
+      "date_create": "2023-09-27T01:32:44Z",
+      "date_of_change": "2023-09-27T01:32:46Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 8,
+    "fields": {
+      "name": "HP",
+      "description": "",
+      "image": "",
+      "category": 45,
+      "price": 456,
+      "date_create": "2023-09-27T01:33:20Z",
+      "date_of_change": "2023-09-27T01:33:22Z"
+    }
+  }
+]
