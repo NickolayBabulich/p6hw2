@@ -15,7 +15,7 @@
 
                 <div class="card mb-4 box-shadow">
                     <div class="card-header">
-                        <h4 class="my-0 font-weight-normal"><a href="product/{{ object.pk }}">{{ object.name }}</a></h4>
+                        <h4 class="my-0 font-weight-normal"><a href="{% url 'catalog:product' object.pk %}">{{ object.name }}</a></h4>
                         <img src="{{ object.image|mediapath }}" width="100" height="100" alt="">
                     </div>
 
