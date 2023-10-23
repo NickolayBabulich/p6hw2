@@ -13,7 +13,7 @@
                 <div class="card mb-4 box-shadow">
                     <div class="card-header">
                         <h4 class="my-0 font-weight-normal">{{ object.name }}</h4>
-{#                        <img src="/media/{{ object.image }}" width="100" height="100" alt="">mediapath#}
+                        {#                        <img src="/media/{{ object.image }}" width="100" height="100" alt="">mediapath#}
                         <img src="{{ object.image|mediapath }}" width="100" height="100" alt="">
                     </div>
 
@@ -21,6 +21,12 @@
 
                         <h1 class="card-title pricing-card-title">{{ object.price }} ₽</h1>
                         <p>{{ object.description }}...</p>
+                        {% for version in object.versions.all %}
+                            {% if version.actual_version %}
+                                <p class="text-muted">Версия продукта: {{ version.version_number }}</p>
+                            {% endif %}
+
+                        {% endfor %}
 
                         <button type="button" class="btn btn-lg btn-block btn-outline-primary">Купить</button>
 
