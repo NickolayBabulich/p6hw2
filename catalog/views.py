@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from django.contrib.auth.mixins import LoginRequiredMixin
 from catalog.forms import ProductForm, VersionForm
 from catalog.models import Product, Category
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
@@ -51,13 +51,19 @@ class ProductDetailView(DetailView):
     template_name = 'catalog/product.html'
 
 
-class ProductCreateView(CreateView):
+class ProductCreateView(LoginRequiredMixin, CreateView):
     model = Product
     form_class = ProductForm
     success_url = reverse_lazy('catalog:list')
 
+    def form_valid(self, form):
+        self.object = form.save()
+        self.object.owner = self.request.user
+        self.object.save()
+        return super().form_valid(form)
 
-class ProductUpdateView(UpdateView):
+
+class ProductUpdateView(LoginRequiredMixin, UpdateView):
     model = Product
     form_class = ProductForm
     success_url = reverse_lazy('catalog:list')
