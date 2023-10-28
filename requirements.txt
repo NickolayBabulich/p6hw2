@@ -3,3 +3,5 @@ ipython
 psycopg2-binary
 Pillow
 pytils
+redis
+python-dotenv

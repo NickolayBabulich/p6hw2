@@ -2,10 +2,12 @@ from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin
 from catalog.forms import ProductForm, VersionForm
 from catalog.models import Product, Category
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, TemplateView
 from catalog.models import Product, Version
 from django.urls import reverse_lazy, reverse
 from django.forms import inlineformset_factory
+
+from catalog.services import get_categories_cache
 
 
 # Create your views here.
@@ -86,3 +88,10 @@ class ProductUpdateView(LoginRequiredMixin, UpdateView):
             formset.instance = self.object
             formset.save()
         return super().form_valid(form)
+
+
+def categories(request):
+    context = {
+        'object_list': get_categories_cache()
+    }
+    return render(request, 'catalog/categories.html', context)
